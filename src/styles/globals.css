@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url(../assets/fonts/Montserrat/Montserrat-5829.css);
 :root {
   --background-color-1: #efe;
   --text-color-1: #111;
-
+  --button-color: #d1c7a3;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,6 +26,9 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+
+  font-family: "Montserrat";
+  font-weight: 500;
 }
 
 body {
