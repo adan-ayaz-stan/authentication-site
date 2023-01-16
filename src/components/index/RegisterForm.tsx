@@ -6,7 +6,7 @@ import {
   AiOutlineGooglePlus,
 } from "react-icons/ai/index";
 
-export default function LoginForm() {
+export default function RegisterForm() {
   return (
     <motion.div
       className="min-h-screen h-fit flex flex-col text-black justify-center px-8 lg:px-16 gap-4"
@@ -19,10 +19,19 @@ export default function LoginForm() {
         ease: "easeOut",
       }}
     >
-      <h1 className="text-3xl font-bold">Login</h1>
-      <h2 className="text-gray-700">Try out our amazing services.</h2>
+      <h1 className="text-3xl font-bold">Register</h1>
+      <h2 className="text-gray-700">
+        Have an amazing time using our services.
+      </h2>
 
       <form className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
+          <label>Full Name</label>
+          <input
+            type="text"
+            className="p-3 bg-gray-100 border-none focus:ring-1 focus:ring-orange-500 rounded-xl"
+          />
+        </div>
         <div className="flex flex-col gap-2">
           <label>Email Address</label>
           <input
@@ -38,15 +47,21 @@ export default function LoginForm() {
           />
         </div>
 
-        <a href="/" className="text-orange-500 font-bold hover:underline">
-          Forgot password
-        </a>
+        <div className="flex flex-row gap-2">
+          <input
+            type="checkbox"
+            className="rounded checked:text-orange-500 focus:ring-orange-500"
+          />
+          <label className="text-sm">
+            I agree with Terms of Service, Terms Of Payments and Privacy Policy.
+          </label>
+        </div>
 
         <button
           type="submit"
           className="p-3 text-black font-normal non-italic text-white bg-orange-500 rounded-xl uppercase"
         >
-          Log In
+          Register
         </button>
       </form>
 

@@ -2,11 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import LoginForm from "@/components/index/LoginForm";
+import RegisterForm from "@/components/index/RegisterForm";
 
 import logo from "../assets/svg/logo.png";
 
-export default function Home() {
+export default function Register() {
   return (
     <>
       <Head>
@@ -80,16 +80,16 @@ export default function Home() {
                 ease: "easeOut",
               }}
             >
-              <p>Don't have an account?</p>
+              <p>Have an account?</p>
               <a href="/" className="font-bold hover:underline">
-                Register Now
+                Login here
               </a>
             </motion.div>
           </div>
         </div>
 
         {/* RIGHT SIDE */}
-        <LoginForm />
+        <RegisterForm />
       </main>
     </>
   );
