@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import {
   AiOutlineApple,
@@ -38,9 +39,9 @@ export default function LoginForm() {
           />
         </div>
 
-        <a href="/" className="text-orange-500 font-bold hover:underline">
+        <Link href={"/"} className="text-orange-500 font-bold hover:underline">
           Forgot password
-        </a>
+        </Link>
 
         <button
           type="submit"
@@ -53,24 +54,24 @@ export default function LoginForm() {
       <p className="w-full text-center">OR</p>
 
       <div className="grid grid-cols-6 grid-rows-1 gap-4">
-        <a
+        <Link
           href="/"
           className="col-span-2 flex flex-row items-center justify-center p-2 text-white bg-[#af2121] rounded-xl"
         >
           <AiOutlineGooglePlus className="text-3xl" />
-        </a>
-        <a
+        </Link>
+        <Link
           href="/"
           className="col-span-2 flex flex-row items-center justify-center p-2 text-white bg-[#3b5998] rounded-xl"
         >
           <AiOutlineFacebook className="text-3xl" />
-        </a>
-        <a
+        </Link>
+        <Link
           href="/"
           className="col-span-2 flex flex-row items-center justify-center p-2 text-white bg-[#132133] hover:shadow-2xl rounded-xl"
         >
           <AiOutlineApple className="text-3xl" />
-        </a>
+        </Link>
       </div>
     </motion.div>
   );

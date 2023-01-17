@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import RegisterForm from "@/components/index/RegisterForm";
 
 import logo from "../assets/svg/logo.png";
+import Link from "next/link";
 
 export default function Register() {
   return (
@@ -20,7 +21,7 @@ export default function Register() {
         {/* LEFT SIDE */}
         <div className="min-h-screen relative p-3 lg:rounded-tr-[5em] lg:rounded-br-[5em] rounded-none text-center lg:text-left bg-[url('https://images.pexels.com/photos/11719086/pexels-photo-11719086.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-no-repeat bg-cover">
           <div className="h-full w-full flex flex-col justify-between p-12 text-black rounded-[3em]">
-            <motion.a
+            <motion.div
               className="relative t-0 h-[120px] md:h-[200px]"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -31,13 +32,15 @@ export default function Register() {
                 ease: "easeOut",
               }}
             >
-              <Image
-                src={logo}
-                alt="logo"
-                fill={true}
-                className="m-auto object-cover"
-              />
-            </motion.a>
+              <Link href="/">
+                <Image
+                  src={logo}
+                  alt="logo"
+                  fill={true}
+                  className="m-auto object-cover"
+                />
+              </Link>
+            </motion.div>
             <div className="font-['Montserrat'] font-medium">
               <motion.span
                 className="block text-3xl my-2 font-['Montserrat'] font-bold"
@@ -51,7 +54,7 @@ export default function Register() {
                 }}
                 style={{ textShadow: "1px 1px 3px #fff" }}
               >
-                Welcome to [Company]
+                Welcome to Company
               </motion.span>
               <motion.span
                 className="block"
@@ -81,9 +84,9 @@ export default function Register() {
               }}
             >
               <p>Have an account?</p>
-              <a href="/" className="font-bold hover:underline">
+              <Link href="/" className="font-bold hover:underline">
                 Login here
-              </a>
+              </Link>
             </motion.div>
           </div>
         </div>
