@@ -41,9 +41,9 @@ export default function Home() {
                 />
               </Link>
             </motion.div>
-            <div className="font-['Montserrat'] font-medium">
+            <div className=" font-medium">
               <motion.span
-                className="block text-3xl my-2 font-['Montserrat'] font-bold"
+                className="block text-3xl my-2  font-bold"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -73,7 +73,7 @@ export default function Home() {
               </motion.span>
             </div>
             <motion.div
-              className="font-['Montserrat']"
+              className=""
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{
